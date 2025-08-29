@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday, Navneet</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffe4ec;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4f8b;
+            font-size: 2.5em;
+        }
+        input {
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #ff4f8b;
+            border-radius: 10px;
+            outline: none;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff4f8b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e43b76;
+        }
+        .message {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #ff4f8b;
+            font-size: 1.2em;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            margin-top: 30px;
+            font-style: italic;
+            color: #ff4f8b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Birthday, Navneet 🎂💖</h1>
+    <input type="text" id="letter" maxlength="1" placeholder="Enter a letter">
+    <button onclick="showMessage()">Open Letter 💌</button>
+
+    <div id="messageBox" class="message"></div>
+
+    <footer>Made by your sweetheart, Moh 💕</footer>
+
+    <script>
+        const messages = {
+            "A": "Ardhang — Remember the first time I called you this? A Bengali nickname on 21 Feb, you really are my Ardhang, my better half 💗",
+            "B": "Babes — You really are my babe, my previous boy that I always want to care for. 💕",
+            "C":  "Cupcake — Absolutely a little dessert for me. Waise cupcake ki jagah cocaine bulana chahiye tha. Tskkk cocaine ho cocaine.",
+            "D": "Darling — Well socha tha daddy bulaungi toh smile karoge par naahhh mein toh darling hi bulaungi, my darling, the closest to my heart.",
+          "E": "Etoile — Star in French. You're a star in my darkness, guiding me through the emtpiness of night.",
+          "F": "Fine shyt — Classes mein baithe baithe yaad aata hai ki I'm also a fine shyt's darling 💋 kya lagte ho.",
+         "G": "Gulabo — Gulabo chalta kya side mein 😏 nashe karne hain mujhe tumhare.",
+         "H": "Honey — Yo yo moi honey bun, sugar plum, tumpe gussa kaise aa sakta hai mujhe kabhi bhi.",
+         "I": "Ishq — Ishq tum hi, tum hi mera Ishq, aur kya chahu mein duniya se agar ye ishq nahi.",
+         "J": "Jaaneman — Jitna bhi hum tumko chahe, kam lagta hai jaaneman.",
+         "K": "Kotik — Little cat in Russian. Well this bcz you're always behind my cat.",
+         "L": "Lyubimiy — Beloved in Russian. You, my love, my beloved, the one who has my heart, I love you.",
+         "M": "Motichoor ke laddu — moi mithai ka dabba hayeee kitne cute ho tum esa lagta hai pura khaa jau.",
+         "N": "Navvie — Best nickname I could have gave to my Navneet..how good it feels when I end up doing something or feel frustrated or aggresive love I go and call Navvieeee everytime.",
+         "O": "Oreo — Why Oreo? Well hard from outside and cream from inside... Ik you got it already 😏.",
+         "P": "Pumpkin — Moi pumpkin, cute cute fluffy saa 🤤 pie bana kar khaa jaungi.",
+         "Q": "Qalb e Jaan — Heart of my life in Urdu, you really are the heartbeat I want to feel in the quietness of life.",
+         "R": "Ryabchik — Little darling in Russian. Mah big bear but heart of a little cute darling.",
+         "S": "Silver fox — Remember this nickname, my oldie? I love you oldieee.",
+         "T": "Teddy — You are often saying how you don't like my turtles, even I want to put them away and hug you tight while sleeping.",
+         "U": "Ullu — You and your ullu waali harkein, ik I do idiotic things more but hmph you're ullu.",
+         "V": "Vsegda Moi — Always mine. You'll be always mine and with me.",
+         "W": "Waffle — A warm stack of waffle with honey dripping. That's what you're to me. A comfort. A luxury.",
+         "X": "XOXO — Dher saara hugs and kisses to you mah love.",
+         "Y": "Ya lyublyu — I love you, till the end of eternity, to the moon and back.",
+         "Z": "Zindagi — My life..my zindagi, that's what you are, the proof that I live and breathe. English got 26 alphabets that's why only 26 letters or I'd have wrote more.",
+        };
+
+        function showMessage() {
+            let letter = document.getElementById('letter').value.toUpperCase();
+            let messageBox = document.getElementById('messageBox');
+
+            if (messages[letter]) {
+                messageBox.textContent = messages[letter];
+                messageBox.classList.add('show');
+            } else {
+                messageBox.textContent = "No message for this letter, but I still love you 💌";
+                messageBox.classList.add('show');
+            }
+        }
+    </script>
+
+</body>
+</html>
